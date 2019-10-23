@@ -7,6 +7,7 @@ import album from './data/album'
 import song from './data/songs'
 
 const Token = process.env.REACT_APP_TOKEN
+const server = process.env.REACT_API_SERVER
 class App extends React.Component {
   constructor(){
     super()
@@ -99,7 +100,7 @@ handleKeyDown(e) {
         displaySearch: false,
       })
       event.target.value.length > 2 &&
-      fetch(`http://127.0.0.1:8000/api/${this.state.apiCall.toLowerCase()}s?search=${event.target.value}`, {
+      fetch(`server/api/${this.state.apiCall.toLowerCase()}s?search=${event.target.value}`, {
       headers : new Headers({
         'Authorization': `token ${Token}`, 
         'Content-Type': 'application/json'
