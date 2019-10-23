@@ -1,0 +1,356 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url(http://weloveiconfonts.com/api/?family=brandico);
+
+.fontAwesome {
+  font-family: Helvetica, 'FontAwesome', sans-serif;
+}
+
+[class*="entypo-"]:before {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  text-align: center;
+  font-family: 'entypo', sans-serif;
+}
+[class*="brandico-"]:before {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  text-align: center;
+  font-family: 'entypo', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.side-panel {
+  padding: 30px 0;
+}
+
+.side-panel ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.side-panel > ul > li:first-child {
+  border-top-right-radius: 3px;
+}
+.side-panel > ul > li:first-child a {
+  padding-top: 13px;
+}
+.side-panel > ul > li:last-child {
+  border-bottom-right-radius: 3px;
+}
+.side-panel > ul > li:last-child a {
+  padding-bottom: 13px;
+}
+.side-panel > ul ul {
+  width: 150px;
+  padding-left: 10px;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+.side-panel > ul ul li:first-child {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-right-color: #efefef;
+}
+.side-panel > ul ul li:first-child:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid #efefef;
+  border-right-color: inherit;
+}
+.side-panel > ul ul li:first-child:hover {
+  border-right-color: #fff;
+}
+.side-panel > ul ul li:last-child {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.side-panel li {
+  position: relative;
+  background: #efefef;
+}
+.side-panel li:hover {
+  background: #fff;
+}
+.side-panel li:hover > ul {
+  display: block;
+}
+.side-panel a {
+  display: inline-block;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.a > ul {
+  width: 150px;
+  transform: translateX(-110px);
+}
+.a span[class*="entypo-"] {
+  display: inline-block;
+  position: relative;
+  left: 105px;
+}
+.a span[class*="brandico-"] {
+  display: inline-block;
+  position: relative;
+  left: 105px;
+}
+.a .menu-item {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  display: block;
+  padding: 8px 13px;
+  color: #efefef;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  transform: translate(-100%, -50%) translateZ(0);
+  background: #483430;
+  border-radius: 3px;
+  border-right-color: #483430;
+  transition: all .3s ease-in-out;
+  z-index: -2;
+}
+.a .menu-item:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid #efefef;
+  border-right-color: inherit;
+}
+.a li:hover .menu-item {
+  transform: translate(10px, -50%);
+}
+.a > ul ul {
+  display: block;
+  opacity: 0;
+  transform: translate(-100%);
+  transition: all .3s ease-in-out;
+  z-index: -1;
+}
+.a > ul > li:first-child:hover .menu-item {
+  transform: translate(-100%, -50%);
+}
+.a li:hover ul {
+  opacity: 1;
+  transform: translate(0);
+}
+
+.b li [class*="entypo-"] {
+  display: inline-block;
+  position: relative;
+  left: 105px;
+  transform: translateX(0);
+  transition: all .3s ease-in-out;
+  transition-delay: .1s;
+}
+.b .menu-item {
+  display: inline-block;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+.b > ul {
+  position: relative;
+  left: -110px;
+  transform: translate(0) translateZ(0);
+  width: 150px;
+  transition: transform .3s .1s ease-in-out;
+}
+.b > ul:hover {
+  transform: translateX(110px);
+  transition: all .3s ease-in-out;
+}
+.b > ul:hover li [class*="entypo-"] {
+  transform: translateX(-110px);
+  transition-delay: 0;
+}
+.b > ul:hover .menu-item {
+  opacity: 1;
+  transition: opacity .3s .2s ease-in-out;
+}
+.b > ul ul {
+  display: block;
+  opacity: 0;
+  transform: translate(-100%);
+  transition: all .3s ease-in-out;
+  z-index: -1;
+}
+.b li:hover ul {
+  opacity: 1;
+  transform: translate(0);
+}
+
+.c ul {
+  width: 150px;
+}
+.c > ul {
+  transform: translateX(-110px) translateZ(0);
+  transition: all .3s ease-in-out;
+}
+.c > ul:hover {
+  transform: translateX(40px);
+}
+.c > ul > li > a [class*="entypo-"] {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 40px;
+  background: #efefef;
+  border-right: 1px solid #483430;
+  transform: translateX(110px);
+  transition: transform .3s ease-in-out;
+}
+.c > ul > li > a [class*="entypo-"]:before {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.c > ul > li:hover > a [class*="entypo-"] {
+  background: #fff;
+}
+.c > ul:hover > li > a [class*="entypo-"] {
+  transform: translateX(-40px);
+}
+.c > ul ul {
+  display: block;
+  opacity: 0;
+  transform: translate(-100%);
+  transition: all .3s ease-in-out;
+  z-index: -1;
+}
+.c li:hover ul {
+  opacity: 1;
+  transform: translate(0);
+}
+
+.d ul {
+  width: 150px;
+}
+
+  
+img {
+  display: block;
+}
+
+#container {
+  max-width: 1000px;
+  margin: 5% auto;
+  position: relative;
+  padding: 1% 5%;
+}
+#container #text {
+  border-radius: 25px;
+  border: 0px solid black;
+  background:  #cfd5da ;
+  padding: 30px;
+  float: left;
+  opacity: .8;
+}
+#container #text h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.8rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 3.2rem;
+}
+#container #text h5 {
+  font-family: 'Montserrat', sans-serif;
+  color: #999999;
+  font-weight: 400;
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.8rem;
+}
+#container #text p {
+  color: rgb(7, 7, 7);
+  text-align: justify;
+  font-family: 'times', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+}
+#container #text .detail {
+  font-family: 'Montserrat', sans-serif;
+  width: 75px;
+  border: 1px solid #999999;
+  font-size: 0.8rem;
+  padding: 10px 15px;
+  margin-top: 25px;
+  transition: ease all 0.5s;
+}
+#container #text .detail:hover {
+  background: #000000;
+  border: 1px solid #000000;
+  color: #ffffff;
+  cursor: pointer;
+}
+#container #pic {
+  max-width: 565px;
+  float: right;
+}
+#container #pic img {
+  width: 500px;
+  height:auto;
+}
+
+@media screen and (min-width: 769px) {
+  #text {
+    max-width: 337px;
+    position: absolute;
+    z-index: 99;
+  }
+
+  #pic {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #pic {
+    width: 100%;
+  }
+}
+
+.albumContainer{
+  margin: 2% auto;
+  position: absolute;
+  padding: 1% 5%;
+}
+
+#albumContainer{
+  padding: 1% 5%;
+  display: inline;
+  border-radius: 10px;
+}
+

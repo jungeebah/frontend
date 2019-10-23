@@ -1,0 +1,14 @@
+img{
+    width: 240px;
+    height: auto;
+    border-radius: 7px;
+    cursor: pointer;
+    -webkit-box-shadow: -1px 4px 22px 0px rgba(232,223,232,1);
+    -moz-box-shadow: -1px 4px 22px 0px rgba(232,223,232,1);
+    box-shadow: -1px 4px 22px 0px rgba(232,223,232,1);
+    padding:1px
+}
+.ant-card-meta-title{
+    cursor: pointer;
+    color:#72e0d1;
+}
