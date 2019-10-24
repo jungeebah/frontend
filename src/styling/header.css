@@ -58,7 +58,7 @@
 
   .box {
     width: 117px;
-    height: 22px;
+    height: 2px;
     border-radius: 5px;
     box-shadow: 0 2px 30px rgba(black, .2);
     background: lighten(#f0f4c3, 10%);

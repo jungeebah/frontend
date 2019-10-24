@@ -48,11 +48,11 @@ export default class Body extends React.Component{
         const {api,handleKeyDown,onTextChange,cursor,query,suggestions,onEnter,onSelection,displaySearch} = this.props
         let infoCard = ""
         if (api === "artist"){
-            infoCard = <ArtistDisplay data={this.state.singleInfo}/>
+            infoCard = <ArtistDisplay data={this.state.singleInfo} apiCall={api}/>
         }else if (api === "album"){
-            infoCard = <AlbumDisplay data={this.state.singleInfo}/>
+            infoCard = <AlbumDisplay data={this.state.singleInfo} apiCall={api}/>
         }else{
-            infoCard = <SongDisplay data={this.state.singleInfo}/>
+            infoCard = <SongDisplay data={this.state.singleInfo} apiCall={api}/>
         }
         const singleDisplay = 
             <div className="single-display">

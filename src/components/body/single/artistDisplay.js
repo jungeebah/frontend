@@ -1,24 +1,32 @@
 import React from 'react'
 import '../../../styling/artistDisplay.css'
-import Nav from '../../nav'
+import album from '../../image/album.jpg';
+import artist from '../../image/artist.jpg'
+import song from '../../image/song.jpg'
 
 export default function ArtistDislpay(props){
+    let image = ""
+    if(props.apiCall==="artist"){
+       image= artist
+    }else if (props.apiCall==="album"){
+        image=album
+    }else{
+        image=song
+    }
+    const filtered_bio = props.data.bio.substring(0, props.data.bio.indexOf('<a'));
+    const more_bio = filtered_bio === ""?"":props.data.bio.substring(props.data.bio.indexOf('<a')).match(/.*href="(.*)">.*/)[1]
+    const learn_more = more_bio===""?"":<a href={more_bio}>Learn more</a>
     return(
-        <div className="artistDisplay">
-            
-                <div className="row">
-                    <Nav></Nav>
-                    <div id="container">
-                <div id="pic">
-                <img alt={props.data.name} src={props.data.image}/>
-            </div>
-            <div id="text">
+        <div className="artistDisplay">       
+            <section>
                 <h1>{props.data.name}</h1>
-                <p>{props.data.bio}</p>
-                <div className="detail">View more</div>
-            </div>
-        </div>
+                <div className="content">
+                    <p>{filtered_bio}</p>{learn_more}
                 </div>
+                <div className="img">
+                    <img alt={props.data.name}src={props.data.image===""?image:props.data.image}/>
+                </div>
+            </section>
         </div>
     )
 }
