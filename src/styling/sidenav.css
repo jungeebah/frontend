@@ -1,258 +1,285 @@
-@import url(http://weloveiconfonts.com/api/?family=entypo);
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-
-.fontAwesome {
-  font-family: Helvetica, 'FontAwesome', sans-serif;
+*,*:before,*:after {
+	box-sizing: border-box;
 }
 
-[class*="entypo-"]:before {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  text-align: center;
-  font-family: 'entypo', sans-serif;
-}
-[class*="brandico-"]:before {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  text-align: center;
-  font-family: 'entypo', sans-serif;
+:after {
+	content: "";
 }
 
-* {
-  box-sizing: border-box;
+nav {
+  float: left;
+	position: relative;
+	top: 41px;
+  left: -41px;
+	background: transparent;
 }
 
-
-.side-panel {
-  padding: 30px 0;
+nav ul {
+	text-align: center;
 }
 
-.side-panel ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.side-panel > ul > li:first-child {
-  border-top-right-radius: 3px;
-}
-.side-panel > ul > li:first-child a {
-  padding-top: 13px;
-}
-.side-panel > ul > li:last-child {
-  border-bottom-right-radius: 3px;
-}
-.side-panel > ul > li:last-child a {
-  padding-bottom: 13px;
-}
-.side-panel > ul ul {
-  width: 150px;
-  padding-left: 10px;
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;
-}
-.side-panel > ul ul li:first-child {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  border-right-color: #efefef;
-}
-.side-panel > ul ul li:first-child:before {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 0;
-  top: 50%;
-  right: 100%;
-  margin-top: -5px;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-right: 5px solid #efefef;
-  border-right-color: inherit;
-}
-.side-panel > ul ul li:first-child:hover {
-  border-right-color: #fff;
-}
-.side-panel > ul ul li:last-child {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-.side-panel li {
-  position: relative;
-  background: #efefef;
-}
-.side-panel li:hover {
-  background: #fff;
-}
-.side-panel li:hover > ul {
-  display: block;
-}
-.side-panel a {
-  display: inline-block;
-  padding: 8px 15px;
+nav ul li {
+	position: relative;
+  width: 70px;
   cursor: pointer;
+	background: crimson;
+	text-transform: uppercase;
+	transition:all .4s ease-out;
 }
 
-.a > ul {
-  width: 150px;
-  transform: translateX(-110px);
-}
-.a span[class*="entypo-"] {
-  display: inline-block;
-  position: relative;
-  left: 105px;
-}
-.a span[class*="brandico-"] {
-  display: inline-block;
-  position: relative;
-  left: 105px;
-}
-.a .menu-item {
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  display: block;
-  padding: 8px 13px;
-  color: #efefef;
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: 1px;
-  white-space: nowrap;
-  transform: translate(-100%, -50%) translateZ(0);
-  background: #483430;
-  border-radius: 3px;
-  border-right-color: #483430;
-  transition: all .3s ease-in-out;
-  z-index: -2;
-}
-.a .menu-item:before {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 0;
-  top: 50%;
-  right: 100%;
-  margin-top: -5px;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-right: 5px solid #efefef;
-  border-right-color: inherit;
-}
-.a li:hover .menu-item {
-  transform: translate(10px, -50%);
-}
-.a > ul ul {
-  display: block;
-  opacity: 0;
-  transform: translate(-100%);
-  transition: all .3s ease-in-out;
-  z-index: -1;
-}
-.a > ul > li:first-child:hover .menu-item {
-  transform: translate(-100%, -50%);
-}
-.a li:hover ul {
-  opacity: 1;
-  transform: translate(0);
+nav ul li:after {
+	position: absolute;
+	background: white;
+	color: crimson;
+	top:0;
+	left: 70px;
+	width: 70px; height: 100%;
+  opacity:.5;
+  transform: perspective(400px) rotateY(90deg);
+	transform-origin: 0 100%;
+	transition:all .4s ease-out;
 }
 
-.b li [class*="entypo-"] {
-  display: inline-block;
-  position: relative;
-  left: 105px;
-  transform: translateX(0);
-  transition: all .3s ease-in-out;
-  transition-delay: .1s;
+nav ul li:nth-child(1):after { 
+	content: "Home";
+	line-height: 88px;
 }
-.b .menu-item {
-  display: inline-block;
-  opacity: 0;
-  transition: opacity .3s ease-in-out;
+nav ul li:nth-child(2):after { 
+	content: "About";
+	line-height: 88px;
 }
-.b > ul {
-  position: relative;
-  left: -110px;
-  transform: translate(0) translateZ(0);
-  width: 150px;
-  transition: transform .3s .1s ease-in-out;
+nav ul li:nth-child(3):after { 
+	content: "Work";
+	line-height: 85px;
 }
-.b > ul:hover {
-  transform: translateX(110px);
-  transition: all .3s ease-in-out;
-}
-.b > ul:hover li [class*="entypo-"] {
-  transform: translateX(-110px);
-  transition-delay: 0;
-}
-.b > ul:hover .menu-item {
-  opacity: 1;
-  transition: opacity .3s .2s ease-in-out;
-}
-.b > ul ul {
-  display: block;
-  opacity: 0;
-  transform: translate(-100%);
-  transition: all .3s ease-in-out;
-  z-index: -1;
-}
-.b li:hover ul {
-  opacity: 1;
-  transform: translate(0);
+nav ul li:nth-child(4):after { 
+	content: "Say hi";
+	line-height: 70px;
 }
 
-.c ul {
-  width: 150px;
-}
-.c > ul {
-  transform: translateX(-110px) translateZ(0);
-  transition: all .3s ease-in-out;
-}
-.c > ul:hover {
-  transform: translateX(40px);
-}
-.c > ul > li > a [class*="entypo-"] {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  display: block;
-  width: 40px;
-  background: #efefef;
-  border-right: 1px solid #483430;
-  transform: translateX(110px);
-  transition: transform .3s ease-in-out;
-}
-.c > ul > li > a [class*="entypo-"]:before {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.c > ul > li:hover > a [class*="entypo-"] {
-  background: #fff;
-}
-.c > ul:hover > li > a [class*="entypo-"] {
-  transform: translateX(-40px);
-}
-.c > ul ul {
-  display: block;
-  opacity: 0;
-  transform: translate(-100%);
-  transition: all .3s ease-in-out;
-  z-index: -1;
-}
-.c li:hover ul {
-  opacity: 1;
-  transform: translate(0);
+nav ul li:hover {
+	transform: translateX(-70px);
 }
 
-.d ul {
-  width: 150px;
+nav ul li:hover:after {
+  opacity: 1;
+	transform: perspective(400px) rotateY(0deg) scale(1) ;
 }
+
+
+nav ul li > div {
+	display: inline-block;
+	padding: 25px 0;
+	background: transparent;
+}
+
+nav ul li div { position: relative; }
+
+.roof {
+	width: 0;
+	height: 0;
+	top:2px;
+	border-style: solid;
+	border-width: 0 21px 15px 21px;
+	border-color: transparent transparent #ffffff transparent;
+}
+
+.roof-edge {
+	position: absolute;
+	z-index: 20;
+	left: -17px;
+	top: 3px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 17px 12px 17px;
+	border-color: transparent transparent crimson transparent;
+}
+/*white triangle over red triangle*/
+.roof-edge:after {
+	position: absolute;
+	left: -14.5px;
+	top: 3px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 14.5px 10px 14.5px;
+	border-color: transparent transparent white transparent;
+}
+
+.front {
+	position: relative;
+	top: 3px;
+	width: 28.5px;
+	height: 20px;
+	margin: 0 auto;
+	background: white;
+}
+/*door*/
+.front:after {
+	position: absolute;
+	background: crimson;
+	width: 11px;
+	height: 13px;
+	bottom: 0;
+	left:9px;
+}
+
+/*/// About me ////*/
+
+.head {
+	width: 32px;
+	height: 35px;
+	background: white;
+	border-radius:8px;
+}
+/*mouth*/
+.head:after {
+	width: 4px;
+	height: 10px;
+	background: white;
+	position: absolute;
+	border-radius:4px 0 0 4px;
+	top:21px;
+	left: 14px;
+	transform:rotate(270deg);
+}
+
+.eyes {
+	width: 8px;
+	height: 5px;
+	border-radius: 50%;
+	position: absolute;
+	top: 10px;
+	left: 5px;
+	background: crimson;
+}
+/*right eye*/
+.eyes:after {
+	width: 8px;
+	height: 5px;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 14px;
+	background: crimson;
+}
+
+.beard {
+	width: 32px;
+	height: 17px;
+	background: crimson;
+	border:2px solid white;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-radius:0 0 8px 8px;
+}
+/*nose*/
+.beard:after {
+	position: absolute;
+	top:-2px;
+	left: 11px;
+	background: white;
+	width:6px;
+	height: 4px;
+	border-left:1px solid crimson;
+	border-right:1px solid crimson;
+}
+
+/*//work//*/
+
+.paper {
+	position: relative;
+	height:32px;
+	width: 29px;
+	background: white;
+	border:2px solid white;
+}
+
+/*window*/
+.paper:after {
+	position: absolute;
+	top:1px;
+	left: 0;
+	width: 25px;
+	height: 29px;
+	background: white;
+	border-top:4px solid crimson;
+}
+
+.lines {
+	position: absolute;
+	top: 36px;
+	left: 5px;
+	width: 11px;
+	box-shadow: 0 0 0 1px crimson;
+}
+
+.lines:after {
+	position: absolute;
+	top: 4px;
+	left: 3px;
+	width: 14px;
+	box-shadow: 0 0 0 1px crimson;
+}
+
+.lines:nth-child(2) {
+	position: absolute;
+	top: 44px;
+	left: 8px;
+	width: 11px;
+}
+
+.lines:nth-child(2):after {
+	position: absolute;
+	top: 4px;
+	left: -3px;
+	width: 11px;
+}
+
+.lines:nth-child(3) {
+	position: absolute;
+	top: 52px;
+	left: 8px;
+	width: 14px;
+}
+
+.lines:nth-child(3):after {
+	display: none;
+}
+
+/*//mail //*/
+
+.mail-base {
+	position: relative;
+	width: 32px;
+	height: 18px;
+	background: white;
+}
+
+.mail-top {
+	position: absolute;
+	z-index: 20;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+	transform: rotate(180deg);
+	border-style: solid;
+	border-width: 0 16px 11px 16px;
+	border-color: transparent transparent crimson transparent;
+}
+
+.mail-top:after {
+	position: absolute;
+	z-index: 20;
+	left: -16px;
+	top: 3px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 16px 9px 16px;
+	border-color: transparent transparent white transparent;
+}
+

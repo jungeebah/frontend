@@ -54,6 +54,7 @@
 .artistDisplay {
   padding: 1em;
   background: black;
+  height:200vh;
 }
 
 .artistDisplay h1 {
@@ -112,7 +113,7 @@ p {
   left: 0;
   bottom: 0;
 }
-.artistDisplay img {
+.img img {
   max-width: 100%;
   vertical-align: middle;
   padding: 1px;

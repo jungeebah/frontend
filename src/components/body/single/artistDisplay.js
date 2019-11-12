@@ -3,7 +3,7 @@ import '../../../styling/artistDisplay.css'
 import album from '../../image/album.jpg';
 import artist from '../../image/artist.jpg'
 import song from '../../image/song.jpg'
-
+import Nav from '../../nav'
 export default function ArtistDislpay(props){
     let image = ""
     if(props.apiCall==="artist"){
@@ -17,7 +17,8 @@ export default function ArtistDislpay(props){
     const more_bio = filtered_bio === ""?"":props.data.bio.substring(props.data.bio.indexOf('<a')).match(/.*href="(.*)">.*/)[1]
     const learn_more = more_bio===""?"":<a href={more_bio}>Learn more</a>
     return(
-        <div className="artistDisplay">       
+        <div className="artistDisplay"> 
+            <Nav/>
             <section>
                 <h1>{props.data.name}</h1>
                 <div className="content">
